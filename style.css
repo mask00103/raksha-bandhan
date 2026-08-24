@@ -1,0 +1,44 @@
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;font-family:Arial,Helvetica,sans-serif;color:#fff;background:radial-gradient(circle at 20% 10%,rgba(108,55,180,.35),transparent 30%),radial-gradient(circle at 80% 80%,rgba(45,90,190,.3),transparent 35%),linear-gradient(135deg,#10051f,#1b0b3b 52%,#08152e)}
+body{min-height:100vh;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background-image:radial-gradient(circle,#fff 1px,transparent 1.5px),radial-gradient(circle,#ffb9ea 1px,transparent 1.5px);background-size:90px 90px,140px 140px;background-position:10px 20px,50px 70px;opacity:.4}
+.screen{display:none;min-height:100vh;padding:30px 14px;align-items:center;justify-content:center;position:relative;z-index:2}.screen.active{display:flex;animation:in .5s ease}
+@keyframes in{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:none}}
+.panel{width:min(1050px,100%);padding:35px;text-align:center;border:1px solid rgba(255,255,255,.18);border-radius:28px;background:rgba(19,7,48,.84);box-shadow:0 25px 80px rgba(0,0,0,.45),0 0 45px rgba(150,70,255,.18);backdrop-filter:blur(12px)}
+.welcome{max-width:700px;padding:55px 30px}.moon{font-size:62px}.eyebrow,.qno{color:#ff9edc;font-weight:900}.welcome h1{font-size:clamp(44px,8vw,76px);line-height:1.02;margin:14px 0;background:linear-gradient(90deg,#fff,#ffb4ec,#a9c9ff);-webkit-background-clip:text;color:transparent}
+h2{font-size:clamp(27px,4vw,42px);margin:16px 0}p{line-height:1.7;color:#eee7ff;font-size:17px}.welcome small{display:block;margin-top:18px;color:#b7b5ed}
+.main-btn{border:0;padding:15px 28px;border-radius:999px;cursor:pointer;font-weight:900;font-size:17px;color:#35104c;background:linear-gradient(90deg,#ff9ed8,#ffd0ee);box-shadow:0 0 25px rgba(255,111,205,.45);transition:.2s}.main-btn:hover{transform:translateY(-3px) scale(1.02)}.hidden{display:none!important}
+.options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px;max-width:720px;margin:28px auto}.options button{min-height:76px;border-radius:20px;border:1px solid rgba(255,255,255,.15);background:rgba(73,35,130,.58);color:#fff;font-size:17px;font-weight:800;cursor:pointer;transition:.2s}.options button:hover{transform:translateY(-4px);border-color:#ff9ddd;box-shadow:0 0 25px rgba(255,90,200,.25)}
+.progress{width:80%;max-width:500px;height:8px;background:#2b1753;border-radius:99px;margin:24px auto;overflow:hidden}.progress span{display:block;height:100%;background:linear-gradient(90deg,#ff77c8,#8bb9ff);border-radius:99px}
+
+/* Mini-game */
+.game-panel{max-width:1250px;padding:28px 24px}.game-title{font-size:clamp(40px,6vw,66px);font-weight:1000;color:#ff6fd0;text-shadow:0 0 20px rgba(255,60,200,.8)}.game-subtitle{margin-top:2px;font-size:20px;font-weight:800}
+.game-stage{min-height:465px;position:relative;display:flex;align-items:flex-end;justify-content:center;gap:35px;padding:10px 20px 0}
+.side-note{position:absolute;top:35px;color:#c58ad7;font-size:16px;line-height:1.45;font-style:italic}.side-note.left{left:10px}.side-note.right{right:10px}
+.chibi{position:relative;width:280px;height:380px;flex:0 0 280px}.head{position:absolute;z-index:5;left:50%;top:15px;width:160px;height:150px;transform:translateX(-50%);background:#fff0dc;border:4px solid #28173c;border-radius:48% 48% 45% 45%;box-shadow:0 8px 0 rgba(0,0,0,.12)}
+.back-hair{position:absolute;z-index:1;width:185px;height:200px;left:50%;top:-8px;transform:translateX(-50%);border-radius:50% 50% 43% 43%;background:#3b211d;border:4px solid #24152f}.male-hair{width:180px;height:180px;background:#292027;border-radius:52% 55% 38% 40%}
+.front-hair{position:absolute;z-index:7;left:1px;top:-8px;width:152px;height:66px;border-radius:70% 70% 38% 38%;background:#3b211d;border-bottom:4px solid #24152f}.front-hair.male{width:156px;height:72px;left:0;top:-10px;background:#292027;border:0;border-radius:55% 60% 35% 30%;clip-path:polygon(0 25%,8% 8%,18% 23%,30% 2%,42% 20%,54% 0,65% 18%,78% 4%,88% 20%,100% 8%,94% 55%,78% 45%,65% 62%,52% 43%,38% 61%,25% 43%,10% 58%,0 48%)}
+.eye{position:absolute;z-index:8;top:70px;width:20px;height:27px;border-radius:50%;background:#21152d}.eye:after{content:"";position:absolute;width:7px;height:7px;left:4px;top:4px;border-radius:50%;background:#fff}.eye.left{left:39px}.eye.right{right:39px}.blush{position:absolute;z-index:7;top:101px;width:24px;height:10px;border-radius:50%;background:#ff9eb9;opacity:.65}.blush.left{left:18px}.blush.right{right:18px}.smile{position:absolute;z-index:8;left:50%;top:100px;transform:translateX(-50%);font-size:20px;color:#5c2945}.bow{position:absolute;z-index:10;left:2px;top:37px;font-size:25px}
+.body{position:absolute;z-index:3;left:50%;top:148px;width:160px;height:195px;transform:translateX(-50%);border:4px solid #28173c;border-radius:48px 48px 30px 30px}.pink{background:linear-gradient(#ff9fd0,#d557a0)}.blue{background:linear-gradient(#4f9cff,#315fd0)}
+.arm{position:absolute;z-index:4;width:48px;height:170px;top:195px;border:4px solid #28173c;border-radius:30px;background:#fff0dc;transform-origin:top center}.sister-arm{right:26px;transform:rotate(-63deg)}.brother-arm{left:25px;height:205px;transform:rotate(67deg)}.hand{position:absolute;z-index:9;left:0;top:344px;font-size:38px}
+.label{position:absolute;z-index:20;bottom:0;left:50%;transform:translateX(-50%);white-space:nowrap;padding:9px 20px;border-radius:999px;background:#32135b;border:1px solid rgba(255,100,220,.35);color:#ffd2f0;font-weight:900;font-size:18px}
+.wrist-target-wrap{position:relative;z-index:30;width:190px;flex:0 0 190px;align-self:center;margin:0 -5px 55px}.put-here{font-size:18px;color:#ff91db;font-weight:1000;text-shadow:0 0 12px #ff55ca;margin-bottom:10px}
+.wrist-target{position:relative;width:155px;height:95px;margin:auto;border:3px dashed #ff7ed5;border-radius:55px;background:rgba(255,130,210,.12);box-shadow:0 0 35px rgba(255,96,205,.55);display:flex;align-items:center;justify-content:center;transition:.2s}.wrist-target span{font-size:10px;font-weight:900;color:#ffc5ea}.wrist-target.ready{transform:scale(1.08);box-shadow:0 0 55px rgba(255,110,220,.9);background:rgba(255,100,220,.2)}.wrist-target.tied{border-style:solid;background:rgba(255,160,225,.18)}
+.tied-rakhi{position:absolute;inset:0;display:none;align-items:center;justify-content:center;z-index:15}.tied-rakhi.show{display:flex;animation:tie .55s ease}.tied-rakhi img{width:145px;height:70px;object-fit:cover;border-radius:18px;box-shadow:0 0 25px #fff8}@keyframes tie{0%{opacity:0;transform:scale(.2) rotate(-25deg)}70%{opacity:1;transform:scale(1.12) rotate(5deg)}100%{transform:scale(1)}}
+.rakhi-section{margin-top:5px}.rakhi-section h2{margin-bottom:12px}.rakhi-options{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.rakhi-card{position:relative;padding:8px;border:2px solid #ff7fd8;border-radius:20px;background:rgba(34,12,68,.8);box-shadow:0 0 18px rgba(255,80,210,.22);cursor:grab;transition:.2s}.rakhi-card:hover{transform:translateY(-5px) scale(1.02);box-shadow:0 0 30px rgba(255,80,210,.5)}.rakhi-card.selected{outline:3px solid #fff;box-shadow:0 0 35px #ff6fd0}.rakhi-card img{width:100%;height:130px;object-fit:contain;border-radius:13px;display:block;background:rgba(16,5,35,.8)}.rakhi-card span{display:block;padding:8px 0 4px;font-weight:900;color:#ffd7f0}.game-hint{min-height:27px}
+.big{font-size:90px;margin:15px}.photo-frame{width:min(560px,100%);margin:25px auto;border-radius:24px;overflow:hidden;border:2px solid rgba(255,255,255,.2);background:#291550}.photo-frame img{display:block;width:100%;max-height:420px;object-fit:cover}.final p{font-size:18px}
+
+@media(max-width:900px){.side-note{display:none}.game-stage{gap:0}.chibi{transform:scale(.84);margin:0 -18px}.wrist-target-wrap{margin-left:-5px;margin-right:-5px}.rakhi-options{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.screen{padding:14px 7px}.panel{padding:22px 12px}.options{grid-template-columns:1fr}.game-stage{min-height:320px;padding:0}.chibi{width:155px;flex-basis:155px;height:300px;transform:scale(.62);margin:0 -35px}.wrist-target-wrap{width:105px;flex-basis:105px;margin-bottom:45px}.wrist-target{width:105px;height:70px}.tied-rakhi img{width:100px;height:52px}.put-here{font-size:11px}.rakhi-card img{height:105px}.game-title{font-size:40px}.game-subtitle{font-size:16px}}
+
+/* REMOVE BROTHER'S BACK HAIR */
+.chibi.brother .back-hair.male-hair {
+    display: none !important;
+}
+/* MAKE BROTHER FRONT HAIR BIGGER */
+.chibi.brother .front-hair.male {
+    width: 180px !important;
+    height: 85px !important;
+    left: -8px !important;
+    top: -17px !important;
+}
