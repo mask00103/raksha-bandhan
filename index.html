@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Raksha Bandhan ❤️</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<audio id="bgMusic" loop preload="auto">
+  <source src="assets/music.m4a" type="audio/mp4">
+</audio>
+
+<!-- WELCOME -->
+<section id="welcome" class="screen active">
+  <div class="panel welcome">
+    <div class="moon">🌙</div>
+
+    <div class="eyebrow">A Little Surprise For You 💕</div>
+
+    <h1>
+      Happy Raksha<br>
+      Bandhan 🎀
+    </h1>
+
+    <p>
+      Hey Sis! ❤️<br>
+      I made something special just for you...
+    </p>
+
+    <button class="main-btn" onclick="enterSite()">
+      Enter Your Surprise ✨
+    </button>
+
+    <small>🎵 Your music will play automatically</small>
+  </div>
+</section>
+
+
+<!-- QUESTION 1 -->
+<section id="q1" class="screen">
+  <div class="panel">
+
+    <div class="qno">Question 1 / 4</div>
+
+    <h2>Who is more cutiee? 😜</h2>
+
+    <div class="options">
+
+      <button onclick="answer('q1', 0)">
+        😎 Me Obviously 😂
+      </button>
+
+      <button onclick="answer('q1', 1)">
+        🥰 You ❤️
+      </button>
+
+    </div>
+
+    <div class="progress">
+      <span style="width:25%"></span>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- QUESTION 2 -->
+<section id="q2" class="screen">
+  <div class="panel">
+
+    <div class="qno">Question 2 / 4</div>
+
+    <h2>What should we do together? ✨</h2>
+
+    <div class="options">
+
+      <button onclick="answer('q2', 0)">
+        🍫 Eat Chocolate
+      </button>
+
+      <button onclick="answer('q2', 1)">
+        🎬 Watch Movies
+      </button>
+
+      <button onclick="answer('q2', 2)">
+        😂 Annoy Each Other
+      </button>
+
+      <button onclick="answer('q2', 3)">
+        💖 Everything!
+      </button>
+
+    </div>
+
+    <div class="progress">
+      <span style="width:50%"></span>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- QUESTION 3 -->
+<section id="q3" class="screen">
+  <div class="panel">
+
+    <div class="qno">Question 3 / 4</div>
+
+    <h2>How special is our bond? 🥹</h2>
+
+    <div class="options">
+
+      <button onclick="answer('q3', 0)">
+        ⭐ Very Special
+      </button>
+
+      <button onclick="answer('q3', 1)">
+        💖 Forever Special
+      </button>
+
+      <button onclick="answer('q3', 2)">
+        ♾️ Best Bond Ever
+      </button>
+
+    </div>
+
+    <div class="progress">
+      <span style="width:75%"></span>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- QUESTION 4 -->
+<section id="q4" class="screen">
+  <div class="panel">
+
+    <div class="qno">Question 4 / 4</div>
+
+    <h2>What makes our bond special? 💕</h2>
+
+    <p>Pick the one that feels most like us!</p>
+
+    <div class="options">
+
+      <button onclick="answer('q4', 0)">
+        The sleepless gaming nights 🎮
+      </button>
+
+      <button onclick="answer('q4', 1)">
+        🤝 Always Having Each Other's Back
+      </button>
+
+      <button onclick="answer('q4', 2)">
+        Sharing reels everytime and laughing together 😂
+      </button>
+
+      <button onclick="answer('q4', 3)">
+        ❤️ All Of It!
+      </button>
+
+    </div>
+
+    <div class="progress">
+      <span style="width:100%"></span>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ANSWER POPUP -->
+<div id="answerPopup" class="answer-popup-overlay">
+
+  <div class="answer-popup">
+
+    <div class="popup-heart">💗</div>
+
+    <h2 id="popupTitle">
+      Awww! ❤️
+    </h2>
+
+    <p id="popupMessage">
+      Your answer is adorable!
+    </p>
+
+    <button
+      id="popupNextBtn"
+      class="main-btn"
+      onclick="continueAfterAnswer()">
+      Next Question ➜
+    </button>
+
+  </div>
+
+</div>
+
+
+<!-- MINI GAME -->
+<section id="game" class="screen">
+
+  <div class="panel game-panel">
+
+    <div class="game-title">
+      Mini Game Time! 🎮
+    </div>
+
+    <p class="game-subtitle">
+      Let's tie the bond of love together ❤️
+    </p>
+
+
+    <div class="game-stage">
+
+      <div class="side-note left">
+        Same<br>
+        People<br>
+        Stronger<br>
+        Bond 💙
+      </div>
+
+
+      <!-- SISTER -->
+      <div class="chibi sister">
+
+        <div class="back-hair"></div>
+
+        <div class="head">
+
+          <div class="front-hair female"></div>
+
+          <span class="eye left"></span>
+          <span class="eye right"></span>
+
+          <span class="blush left"></span>
+          <span class="blush right"></span>
+
+          <span class="smile">⌣</span>
+
+          <span class="bow">🎀</span>
+
+        </div>
+
+        <div class="body pink"></div>
+
+        <div class="arm arm-to-wrist sister-arm"></div>
+
+        <div class="label">
+          Sis 💕
+        </div>
+
+      </div>
+
+
+      <!-- WRIST TARGET -->
+      <div class="wrist-target-wrap">
+
+        <div class="put-here">
+          Drag the Rakhi here 👇
+        </div>
+
+        <div id="wristTarget" class="wrist-target">
+
+          <span>WRIST</span>
+
+          <div id="tiedRakhi" class="tied-rakhi">
+
+            <img
+              id="tiedImg"
+              src=""
+              alt="Tied Rakhi">
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- BROTHER -->
+      <div class="chibi brother">
+
+        <div class="back-hair male-hair"></div>
+
+        <div class="head">
+
+          <div class="front-hair male"></div>
+
+          <span class="eye left"></span>
+          <span class="eye right"></span>
+
+          <span class="blush left"></span>
+          <span class="blush right"></span>
+
+          <span class="smile">⌣</span>
+
+        </div>
+
+        <div class="body blue"></div>
+
+        <div class="arm brother-arm"></div>
+
+        <div class="hand">✋</div>
+
+        <div class="label">
+          Brother 💙
+        </div>
+
+      </div>
+
+
+      <div class="side-note right">
+        Rakhi<br>
+        Brings<br>
+        Happiness<br>
+        Always... ✨
+      </div>
+
+    </div>
+
+
+    <!-- RAKHI SECTION -->
+    <div class="rakhi-section">
+
+      <h2>
+        Choose Your Rakhi 🎀
+      </h2>
+
+      <div class="rakhi-options">
+
+
+        <div
+          class="rakhi-card"
+          draggable="true"
+          data-index="0">
+
+          <img
+            src="assets/rakhi_1_cute_playful.png"
+            alt="Rakhi 1">
+
+          <span>
+            Rakhi 1
+          </span>
+
+        </div>
+
+
+        <div
+          class="rakhi-card"
+          draggable="true"
+          data-index="1">
+
+          <img
+            src="assets/rakhi_2_peacock_royal.png"
+            alt="Rakhi 2">
+
+          <span>
+            Rakhi 2
+          </span>
+
+        </div>
+
+
+        <div
+          class="rakhi-card"
+          draggable="true"
+          data-index="2">
+
+          <img
+            src="assets/rakhi_3_blue_eye.png"
+            alt="Rakhi 3">
+
+          <span>
+            Rakhi 3
+          </span>
+
+        </div>
+
+
+        <div
+          class="rakhi-card"
+          draggable="true"
+          data-index="3">
+
+          <img
+            src="assets/rakhi_4_red_royal.png"
+            alt="Rakhi 4">
+
+          <span>
+            Rakhi 4
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <p id="gameHint">
+        Drag your favorite Rakhi onto Brother's wrist ❤️
+      </p>
+
+
+      <button
+        id="doneBtn"
+        class="main-btn hidden"
+        onclick="go('afterGame')">
+
+        Tied with Love! 💖
+
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- AFTER GAME -->
+<section id="afterGame" class="screen">
+
+  <div class="panel">
+
+    <h2>
+      Perfect! 🎀❤️
+    </h2>
+
+    <div class="big">
+      🍫
+    </div>
+
+    <p>
+      The Rakhi is tied!
+      Now here's a little chocolate for you. 😋
+    </p>
+
+    <button
+      class="main-btn"
+      onclick="go('gift')">
+
+      Continue 🎁
+
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- GIFT -->
+<section id="gift" class="screen">
+
+  <div class="panel">
+
+    <h2>
+      A Special Gift For You 🎁
+    </h2>
+
+    <div class="big">
+      🎁
+    </div>
+
+    <p>
+      Because you're my cutie sister. 💕
+    </p>
+
+    <button
+      class="main-btn"
+      onclick="go('final')">
+
+      Open Your Gift ❤️
+
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- FINAL -->
+<section id="final" class="screen">
+
+  <div class="panel final">
+
+    <h1>
+      Happy Raksha Bandhan ❤️
+    </h1>
+
+    <h2>
+      My Dear Sis! 💕
+    </h2>
+
+    <p>
+      You are not just my sister,<br>
+      but one of the most special people in my life that meet in 2026 to forever 💖.
+    </p>
+
+    <p>
+      we started as stranger became known then friends then brother and sister-ini-law then again ended up brother and sister with pure love and joy care for each other. 🥰 ,<br>
+    Remember to sleep early and rest properly everyday.
+    </p>
+
+    <p>
+      No matter what remember,<br>
+      your cutie lil brother is always there .❤️
+    </p>
+
+
+    <div class="photo-frame">
+
+      <img
+        src="assets/memory.png"
+        alt="Our Memory">
+
+    </div>
+
+
+    <h2>
+      Always Together ♾️
+    </h2>
+
+    <button
+      class="main-btn"
+      onclick="go('ending')">
+
+      Keep This Memory ❤️
+
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- ENDING -->
+<section id="ending" class="screen">
+
+  <div class="panel final">
+
+    <h1>
+      Some Bonds Are Forever ❤️
+    </h1>
+
+    <p>
+      More memories.<br>
+      More fights.<br>
+      More laughter.<br>
+      More happiness.
+    </p>
+
+    <div class="big"
+      ❤️
+    </div>
+
+    <h2>
+      Happy Raksha Bandhan!
+    </h2>
+
+  </div>
+
+</section>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
